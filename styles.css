@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-blue: #003580;
+    --primary-red: #F80000;
+    --bg-light: #F8F9FA;
+    --text-dark: #2D3436;
+    --text-muted: #636e72;
+    --white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.nav-brand {
+    font-family: 'Outfit', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header & Nav */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    background: linear-gradient(to bottom, #0056b3, #003580);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-brand img {
+    height: 60px;
+    /* Adjust based on preferred sizing */
+    width: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Removed old CSS text-based logo effects */
+
+/* Old swoosh removed as it is now part of the image */
+
+.partnership-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.partnership-badges {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.badge-logo {
+    background: #ffffff;
+    padding: 2px 6px;
+    border-radius: 2px;
+}
+
+.badge-logo img {
+    height: 12px;
+    display: block;
+}
+
+.search-area {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 2px;
+    padding: 2px 8px;
+    width: 200px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 2px 5px;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+.search-container i {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.nav-wrapper {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    color: var(--primary-red);
+}
+
+.nav-link.active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('oracle_cloud_hero_modern.png') no-repeat center center/cover;
+    padding-top: 180px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-subtitle {
+    color: var(--primary-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-red);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Services Section */
+.services {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-red);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--bg-light);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    opacity: 0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+    background: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block !important;
+        color: #ffffff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+    }
+}
+
+/* Responsive Header Refinements */
+@media (max-width: 992px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .partnership-area {
+        align-items: center;
+    }
+
+    .nav-menu {
+        gap: 0.8rem;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 5px 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        display: none;
+        /* Hide standard nav on mobile */
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        color: #ffffff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        background: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 2000;
+    }
+
+    .hero {
+        text-align: center;
+        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('oracle_cloud_hero_modern.png') no-repeat center center/cover;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+}
+
+.nav-menu.active {
+    right: 0;
+}
